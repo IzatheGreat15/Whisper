@@ -17,6 +17,9 @@
     "react-dom": "18.1.0",
     "@expo/webpack-config": "^0.17.2"
   },
+  "rnpm": {
+    "assets": ["./assets/fonts"]
+  },
   "devDependencies": {
     "@babel/core": "^7.12.9"
   },
