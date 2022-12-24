@@ -6,5 +6,3 @@ Features:
 User Authentication
 Private Messaging
 Group Messaging
-User Connection
-Google and Facebook Authentication
