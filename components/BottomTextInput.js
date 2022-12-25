@@ -16,6 +16,7 @@ const BottomTextInput = (props) => {
 const styles = StyleSheet.create({
     container: {
         width: '90%', 
+        backgroundColor: 'red'
     },
     label: {
         marginBottom: 15,
