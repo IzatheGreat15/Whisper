@@ -1,12 +1,19 @@
+import { useState } from 'react';
 import { StyleSheet, Text, View, Image, ImageBackground, Dimensions } from 'react-native';
 import BG from '../assets/bg.png';
-import BottomTextInput from '../components/BottomTextInput';
+import SwipeButton from '../components/SwipeButton';
 import Login from './Login';
 
 const screenHeight = Dimensions.get('screen').height;
 const screenWidth = Dimensions.get('screen').width;
 
 const Auth = () => {
+  const [value, setValue] = useState("Signup");
+
+  const chooseValue = (value) => {
+    setValue(value);
+  };
+
   return (
     <View style={styles.container}>
         <ImageBackground
@@ -18,6 +25,9 @@ const Auth = () => {
               <View style={styles.circle}>
                   <Image source={require('../assets/logo.png')} style={styles.logo}></Image>
               </View>
+
+              <SwipeButton value={ value } chooseValue={ chooseValue } />
+              
               <Login />
             </View>
       </ImageBackground>
@@ -57,7 +67,7 @@ const styles = StyleSheet.create({
     borderRadius: 25,
     justifyContent: 'center',
     alignItems: 'center',
-    height: '80%',
+    height: '70%',
     width: '80%',
   },
   logo: {
